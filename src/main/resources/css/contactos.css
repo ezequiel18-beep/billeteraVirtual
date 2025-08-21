@@ -1,0 +1,34 @@
+
+.root {
+    -fx-background-color: #FFD203;
+}
+
+
+.btn-principal {
+    -fx-background-color: #4CAF50;
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-background-radius: 10;
+    -fx-padding: 8 16;
+}
+
+.btn-principal:hover {
+    -fx-background-color: #45a049;
+}
+
+.text-field-principal {
+    -fx-font-size: 16px;
+    -fx-padding: 10;
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+}
+
+
+.listview-tarjeta {
+    -fx-background-color: white;
+    -fx-background-radius: 20;
+    -fx-border-radius: 20;
+    -fx-padding: 10;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.25), 15, 0.5, 0, 0);
+    -fx-font-size: 16px;
+}

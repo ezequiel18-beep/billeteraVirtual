@@ -1,0 +1,43 @@
+
+.root-pane {
+    -fx-background-color: #FFD203;
+}
+
+
+.titulo {
+    -fx-font-weight: bold;
+    -fx-text-fill: #333333;
+}
+
+
+.monto-textfield {
+    -fx-background-color: white;
+    -fx-background-radius: 20;
+    -fx-border-radius: 20;
+    -fx-padding: 10;
+    -fx-font-size: 70px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 10, 0.5, 0, 0);
+}
+
+.btn-principal {
+    -fx-background-color: #4CAF50;
+    -fx-text-fill: white;
+    -fx-font-size: 18px;
+    -fx-background-radius: 15;
+}
+
+.btn-principal:hover {
+    -fx-background-color: #45a049;
+}
+
+
+.btn-secundario {
+    -fx-background-color: #CCCCCC;
+    -fx-text-fill: #333333;
+    -fx-font-size: 18px;
+    -fx-background-radius: 15;
+}
+
+.btn-secundario:hover {
+    -fx-background-color: #B0B0B0;
+}
