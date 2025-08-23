@@ -17,30 +17,40 @@
             styleClass="root-pane">
 
    <children>
-      <!-- Contenedor vertical principal -->
       <VBox alignment="CENTER" spacing="30" layoutX="0" layoutY="50" prefWidth="576">
 
-         <!-- Título -->
+
          <Label text="¿Cuánto querés transferir?" styleClass="titulo">
             <font>
                <Font size="36"/>
             </font>
          </Label>
 
-         <!-- TextField de monto -->
-         <TextField fx:id="txtMontoAEnviar"
-                    promptText="0"
-                    text="/$"
-                    alignment="CENTER_RIGHT"
-                    prefHeight="150"
-                    prefWidth="480"
-                    styleClass="monto-textfield">
-            <font>
-               <Font size="77"/>
-            </font>
-         </TextField>
 
-         <!-- Botones -->
+         <HBox alignment="CENTER" spacing="10">
+            <Label styleClass="simbolo-moneda">
+               <font>
+                  <Font size="77"/>
+               </font>
+               <text>
+                  <![CDATA[$]]>
+               </text>
+            </Label>
+
+
+            <TextField fx:id="txtMontoAEnviar"
+                       promptText="0"
+                       alignment="CENTER_RIGHT"
+                       prefHeight="150"
+                       prefWidth="400"
+                       styleClass="monto-textfield">
+               <font>
+                  <Font size="77"/>
+               </font>
+            </TextField>
+         </HBox>
+
+
          <HBox spacing="40" alignment="CENTER">
             <Button text="Cancelar"
                     onAction="#ClickCancelar"

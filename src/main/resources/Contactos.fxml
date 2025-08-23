@@ -10,18 +10,21 @@
 <AnchorPane prefHeight="859.0" prefWidth="576.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ContactosController" stylesheets="@css/contactos.css">
 
    <children>
-      <!-- Contenedor central -->
+
       <VBox layoutX="0" layoutY="50" alignment="CENTER" spacing="20" prefWidth="576" prefHeight="759">
 
-         <!-- Botón regresar -->
+
          <HBox alignment="CENTER_LEFT" prefWidth="500">
             <Button fx:id="btnRegresar" text="⬅ Regresar" onAction="#ClickRegresar" styleClass="btn-principal"/>
          </HBox>
 
-         <!-- Campo para agregar contacto -->
+
          <TextField fx:id="txtAgregarContacto" onAction="#enterUsuario" promptText="Agregar contacto" styleClass="text-field-principal" prefWidth="400"/>
 
-         <!-- Tarjeta de contactos -->
+         <Button fx:id="btnEliminarContacto" text="Eliminar Contacto" onAction="#eliminarContacto" styleClass="btn-secundario"/>
+
+
+
          <ListView fx:id="listaContactos" prefWidth="450" prefHeight="600" styleClass="listview-tarjeta"/>
 
       </VBox>

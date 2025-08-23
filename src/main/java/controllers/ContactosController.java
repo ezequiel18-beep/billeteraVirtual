@@ -42,7 +42,7 @@ public class ContactosController {
 
 
 
-    private void mostrarContactos() {
+    public void mostrarContactos() {
         ObservableList<String> contactos = FXCollections.observableArrayList();
         List<Cliente> clientes = servi.traerListaClientes();
 
@@ -60,14 +60,14 @@ public class ContactosController {
                 if (seleccionado != null) {
                     Cliente contacto = servi.traerContacto(seleccionado);
                     try {
-                        cargarTransferir(contacto, event);
-                    } catch (IOException e) {
+                        cargarTransferir(contacto, event); }
+                    catch (IOException e) {
                         servi.mostrarAlerta("Error", "No se pudo cargar la ventana", Alert.AlertType.ERROR);
-                        e.printStackTrace();
-                    }
+                    e.printStackTrace(); }
                 }
             }
         });
+
     }
 
     private void cargarTransferir(Cliente contacto, MouseEvent mouseEvent) throws IOException {
@@ -85,19 +85,35 @@ public class ContactosController {
         escenaActual.setRoot(transferirRoot);
     }
 
-    public void enterUsuario(ActionEvent actionEvent) {
-        if (servi.agregarContacto(txtAgregarContacto.getText()) == null ){
+    public void enterUsuario(ActionEvent actionEvent){
+        if (servi.agregarContacto(txtAgregarContacto.getText()) == null) {
             servi.mostrarAlerta("Error", "Contacto Existente", Alert.AlertType.ERROR);
-        }
-        else{
-            servi.mostrarAlerta("Exitoso","Contacto agregado", Alert.AlertType.INFORMATION);
+        } else {
+            servi.mostrarAlerta("Exitoso", "Contacto agregado", Alert.AlertType.INFORMATION);
             mostrarContactos();
 
         }
-
-
-
     }
+
+
+    @FXML
+    void eliminarContacto(ActionEvent event) {
+        String seleccionado = listaContactos.getSelectionModel().getSelectedItem();
+        if (seleccionado == null) {
+            servi.mostrarAlerta("Atención", "No seleccionaste ningún contacto", Alert.AlertType.WARNING);
+            return;
+        }
+
+
+        servi.eliminarUsuario(seleccionado);
+
+
+        listaContactos.getItems().remove(seleccionado);
+
+        servi.mostrarAlerta("Éxito", "Contacto eliminado correctamente", Alert.AlertType.INFORMATION);
+}
+
+
     @FXML
     void ClickRegresar(ActionEvent event) throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource(Paths.DASHBOARD));

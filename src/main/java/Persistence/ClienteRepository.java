@@ -20,6 +20,26 @@ public class ClienteRepository {
         }
     }
 
+    public void eliminarUsuario(String usuario) {
+        List<Cliente> clientes = cargarClientes(); // cargar la lista completa
+
+        if (clientes == null) {
+            System.out.println("No se pudo cargar la lista de clientes.");
+            return;
+        }
+
+        // Remover el cliente con el usuario indicado
+        boolean eliminado = clientes.removeIf(c -> c.getUsuario().equals(usuario));
+
+        if (eliminado) {
+            // Guardar la lista actualizada
+            guardarClientes(clientes);
+            System.out.println("Cliente '" + usuario + "' eliminado correctamente.");
+        } else {
+            System.out.println("No se encontró un cliente con usuario: " + usuario);
+        }
+    }
+
     // Carga la lista de clientes desde el archivo
     @SuppressWarnings("unchecked")
     public List<Cliente> cargarClientes() {

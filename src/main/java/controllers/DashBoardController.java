@@ -12,6 +12,7 @@ import javafx.scene.control.Label;
 import modelo.Transaccion;
 import utilities.Paths;
 
+import java.awt.event.ActionEvent;
 import java.io.IOException;
 import java.util.List;
 
@@ -49,6 +50,7 @@ public class DashBoardController {
     private void mostrarUltimosMovimientos(List<Transaccion> transaccion){
         listMovimientos.setItems(FXCollections.observableArrayList(cliente.getTransacciones()));
     }
+
     @FXML
 
     public void ClickTransferir(javafx.event.ActionEvent actionEvent) throws IOException {
@@ -63,6 +65,19 @@ public class DashBoardController {
         Scene escenaActual = ((Node) actionEvent.getSource()).getScene();
         escenaActual.setRoot(transferirRoot);
 
+    }
+    @FXML
+    void clickDolar(javafx.event.ActionEvent actionEvent) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource(Paths.DOLAR));
+        Parent transferirRoot = loader.load();
+
+        // Paso datos al controlador
+        DolarController controller = loader.getController();
+        controller.setCliente(cliente);
+
+        // Cambio el contenido de la escena actual
+        Scene escenaActual = ((Node) actionEvent.getSource()).getScene();
+        escenaActual.setRoot(transferirRoot);
     }
 
 

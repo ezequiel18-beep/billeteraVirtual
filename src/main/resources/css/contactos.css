@@ -11,6 +11,14 @@
     -fx-background-radius: 10;
     -fx-padding: 8 16;
 }
+.btn-secundario {
+    -fx-background-color: #F54927;
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-background-radius: 10;
+    -fx-padding: 8 16;
+}
+
 
 .btn-principal:hover {
     -fx-background-color: #45a049;

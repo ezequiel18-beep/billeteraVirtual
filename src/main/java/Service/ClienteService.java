@@ -101,4 +101,16 @@ public class ClienteService {
        double montoReal = Double.parseDouble(monto);
         return montoReal;
     }
+
+    public void eliminarUsuario(String usuario) {
+        repository.eliminarUsuario(usuario);
+    }
+
+    public void ComprarDolares(TextField txtMontoAEnviar, TextField tfDolarTotal) {
+         Double montoAComprar = Double.valueOf(txtMontoAEnviar.getText());
+         Double montoEnDolar = Double.valueOf(tfDolarTotal.getText());
+        if (montoAComprar>0){
+
+        }
+    }
 }
