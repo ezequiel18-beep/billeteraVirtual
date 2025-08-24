@@ -67,7 +67,7 @@ public class DashBoardController {
 
     }
     @FXML
-    void clickDolar(javafx.event.ActionEvent actionEvent) throws IOException {
+    void ClickDolar(javafx.event.ActionEvent actionEvent) throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource(Paths.DOLAR));
         Parent transferirRoot = loader.load();
 

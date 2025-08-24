@@ -11,17 +11,8 @@ import java.lang.classfile.Label;
 
 public class DolarController {
     private Cliente cliente;
-    private Double valorDolar;
 
-    public DolarController() {
-    }
-
-    public void setCliente(Cliente cliente, Double valorDolar) {
-        this.cliente = cliente;
-        this.valorDolar = 1.335;
-    }
-
-    ClienteService servi = new ClienteService(new ClienteRepository());
+    private Double dolarValor;
 
     @FXML
     private TextField tfDolarTotal;
@@ -29,8 +20,22 @@ public class DolarController {
     @FXML
     private TextField txtMontoAEnviar;
 
+
     @FXML
     private Label txtValorDolar;
+
+
+    ClienteService servi = new ClienteService(new ClienteRepository());
+
+
+
+    public DolarController() {
+    }
+
+    public void setCliente(Cliente cliente) {
+        this.cliente = cliente;
+        this.dolarValor = 1.335;
+    }
 
     @FXML
     void ClickCancelar(ActionEvent event) {
@@ -42,4 +47,13 @@ public class DolarController {
         servi.ComprarDolares(txtMontoAEnviar,tfDolarTotal);
 
     }
+
+
+    @FXML
+    public void initialize(){
+
+    }
+
+
+
 }

@@ -7,12 +7,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.StackPane?>
 
-<AnchorPane prefHeight="859.0" prefWidth="576.0"
-            xmlns="http://javafx.com/javafx/24.0.1"
-            xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="controllers.DashBoardController"
-            stylesheets="@css/dashboard.css"
-            styleClass="root-pane">
+<AnchorPane prefHeight="859.0" prefWidth="576.0" styleClass="root-pane" stylesheets="@css/dashboard.css" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.DashBoardController">
 
    <children>
       <!-- Contenedor principal del saldo y botones -->
@@ -20,30 +15,22 @@
          <children>
 
             <!-- Contenedor centrado para el saldo -->
-            <StackPane layoutY="40.0" prefWidth="576.0" prefHeight="150.0">
+            <StackPane layoutY="40.0" prefHeight="150.0" prefWidth="576.0">
                <children>
-                  <Label fx:id="dinero" styleClass="dashboard-balance"/>
+                  <Label fx:id="dinero" styleClass="dashboard-balance" />
                </children>
             </StackPane>
 
             <!-- Botones -->
-            <Button fx:id="bTransferir" layoutX="77.0" layoutY="251.0" mnemonicParsing="false"
-                    onAction="#ClickTransferir" prefHeight="43.0" prefWidth="109.0"
-                    text="Transferir" styleClass="dashboard-button"/>
+            <Button fx:id="bTransferir" layoutX="77.0" layoutY="251.0" mnemonicParsing="false" onAction="#ClickTransferir" prefHeight="43.0" prefWidth="109.0" styleClass="dashboard-button" text="Transferir" />
 
-            <Button fx:id="bIngresar" layoutX="234.0" layoutY="251.0" mnemonicParsing="false"
-                    prefHeight="43.0" prefWidth="109.0"
-                    text="Ingresar" styleClass="dashboard-button"/>
+            <Button fx:id="bIngresar" layoutX="234.0" layoutY="251.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="109.0" styleClass="dashboard-button" text="Ingresar" />
 
-            <Button fx:id="bCvuYAlias" layoutX="388.0" layoutY="251.0" mnemonicParsing="false"
-                    prefHeight="43.0" prefWidth="109.0"
-                    text="Cvu y alias" styleClass="dashboard-button"/>
+            <Button fx:id="lblDolar" layoutX="388.0" layoutY="251.0" mnemonicParsing="false" onAction="#ClickDolar" prefHeight="43.0" prefWidth="109.0" styleClass="dashboard-button" text="Dolar" />
          </children>
       </Pane>
 
       <!-- Lista de movimientos -->
-      <ListView fx:id="listMovimientos" layoutX="19.0" layoutY="338.0"
-                prefHeight="464.0" prefWidth="545.0"
-                styleClass="info-card" />
+      <ListView fx:id="listMovimientos" layoutX="19.0" layoutY="338.0" prefHeight="464.0" prefWidth="545.0" styleClass="info-card" />
    </children>
 </AnchorPane>

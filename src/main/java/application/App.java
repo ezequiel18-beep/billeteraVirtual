@@ -6,6 +6,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 import modelo.Cliente;
 import modelo.Transaccion;
 import utilities.Paths;
@@ -74,6 +75,7 @@ public class App extends Application {
         AnchorPane load = FXMLLoader.load(getClass().getResource(Paths.LOGIN));
         Scene scene = new Scene(load);
         primarystage.setScene(scene);
+        primarystage.initStyle(StageStyle.UTILITY);
         primarystage.setOnCloseRequest(e -> repo.guardarClientes(clientes));
         primarystage.show();
 
