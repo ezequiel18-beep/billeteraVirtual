@@ -39,16 +39,16 @@ public class App extends Application {
             transacciones.add(new Transaccion("Retiro", 200.00, LocalDateTime.now().minusMinutes(30)));
             transacciones.add(new Transaccion("Transferencia", 1000.00, LocalDateTime.now()));
 
-            Cliente c1 = new Cliente("ezequiel22g",500.000, "2178", "12343");
-            Cliente c2= new Cliente("brisaferreyra18",800.000,"3232","21324");
-            Cliente c3 = new Cliente("juanperez10", 1200.50, "1111", "54321");
-            Cliente c4 = new Cliente("maria.lopez", 950.75, "2222", "67890");
-            Cliente c5 = new Cliente("carlos_dev", 300.00, "3333", "98765");
-            Cliente c6 = new Cliente("sofia23", 1500.00, "4444", "13579");
-            Cliente c7 = new Cliente("martin_ok", 50.00, "5555", "24680");
-            Cliente c8 = new Cliente("luciagonzalez", 2000.00, "6666", "11223");
-            Cliente c9 = new Cliente("pabloCoder", 725.25, "7777", "44556");
-            Cliente c10 = new Cliente("anabel_92", 340.10, "8888", "77889");
+            Cliente c1 = new Cliente("ezequiel22g",500000.00, "2178", "12343");
+            Cliente c2= new Cliente("brisaferreyra18",800000.00,"3232","21324");
+            Cliente c3 = new Cliente("juanperez10", 120050.00, "1111", "54321");
+            Cliente c4 = new Cliente("maria.lopez", 95075.00, "2222", "67890");
+            Cliente c5 = new Cliente("carlos_dev", 30000.00, "3333", "98765");
+            Cliente c6 = new Cliente("sofia23", 150000.00, "4444", "13579");
+            Cliente c7 = new Cliente("martin_ok", 5000.00, "5555", "24680");
+            Cliente c8 = new Cliente("luciagonzalez", 200000.00, "6666", "11223");
+            Cliente c9 = new Cliente("pabloCoder", 72525.00, "7777", "44556");
+            Cliente c10 = new Cliente("anabel_92", 34010.00, "8888", "77889");
 
             c1.setTransacciones(transacciones);
 

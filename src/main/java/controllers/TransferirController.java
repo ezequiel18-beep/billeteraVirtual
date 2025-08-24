@@ -43,7 +43,7 @@ public class TransferirController {
 
     @FXML
     public void ClickEnviar(javafx.event.ActionEvent event) {
-       double monto= servi.parsearString(txtMontoAEnviar);
+       Double monto= servi.parsearString(txtMontoAEnviar);
         if(monto<0){
             servi.mostrarAlerta("Error","El monto ingresado tiene que ser mayor a 0", Alert.AlertType.ERROR);
         }

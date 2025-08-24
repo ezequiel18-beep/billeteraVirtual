@@ -14,7 +14,9 @@ import utilities.Paths;
 
 import java.awt.event.ActionEvent;
 import java.io.IOException;
+import java.text.NumberFormat;
 import java.util.List;
+import java.util.Locale;
 
 
 public class DashBoardController {
@@ -38,13 +40,14 @@ public class DashBoardController {
 
     public void setCliente(Cliente cliente) {
         this.cliente = cliente;
-        mostrarDinero(String.valueOf(cliente.getSaldo()));
+        mostrarDinero(cliente.getSaldo());
         mostrarUltimosMovimientos(cliente.getTransacciones());
     }
 
     // Mostramos el saldo en cuenta que tiene el cliente
-    private void mostrarDinero(String mensaje){
-        dinero.setText("$"+mensaje);
+    private void mostrarDinero(Double dineroCliente){
+        NumberFormat formato = NumberFormat.getCurrencyInstance(new Locale("es","AR"));
+        dinero.setText(formato.format(dineroCliente));
     }
 
     private void mostrarUltimosMovimientos(List<Transaccion> transaccion){

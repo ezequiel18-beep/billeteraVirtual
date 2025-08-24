@@ -88,7 +88,7 @@ public class ClienteService {
     }
 
 
-    public double parsearString(TextField txtMontoAEnviar) {
+    public Double parsearString(TextField txtMontoAEnviar) {
         String monto = "";
         String texto = txtMontoAEnviar.getText();
         for (int i=0; i < texto.length(); i++){
@@ -98,7 +98,7 @@ public class ClienteService {
 
             }
         }
-       double montoReal = Double.parseDouble(monto);
+       Double montoReal = Double.valueOf(monto);
         return montoReal;
     }
 
@@ -106,11 +106,14 @@ public class ClienteService {
         repository.eliminarUsuario(usuario);
     }
 
-    public void ComprarDolares(TextField txtMontoAEnviar, TextField tfDolarTotal) {
+    public boolean ComprarDolares(TextField txtMontoAEnviar, TextField tfDolarTotal, Cliente cliente) {
          Double montoAComprar = Double.valueOf(txtMontoAEnviar.getText());
          Double montoEnDolar = Double.valueOf(tfDolarTotal.getText());
         if (montoAComprar>0){
+            cliente.setSaldo(cliente.getSaldo()-montoAComprar);
+            return true;
 
         }
+        return false;
     }
 }
