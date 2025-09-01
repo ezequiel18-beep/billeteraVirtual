@@ -71,4 +71,7 @@ Ingresar con Usuario: ezequiel22g  Password: 2178
 
   ¡Las contribuciones son bienvenidas!
   Podés abrir un issue o enviar un pull request con mejoras o sugerencias.
+
+🌐 Contacto:
+        www.linkedin.com/in/ezequiel-gomez-lombardo
      

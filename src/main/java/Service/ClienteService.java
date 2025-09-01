@@ -87,7 +87,7 @@ public class ClienteService {
         return true;
     }
 
-
+    // Logica para separar el signo de la moneda del monto
     public Double parsearString(TextField txtMontoAEnviar) {
         String monto = "";
         String texto = txtMontoAEnviar.getText();

@@ -41,7 +41,7 @@ public class ContactosController {
 
 
 
-
+    // mostramos contactos
     public void mostrarContactos() {
         ObservableList<String> contactos = FXCollections.observableArrayList();
         List<Cliente> clientes = servi.traerListaClientes();
