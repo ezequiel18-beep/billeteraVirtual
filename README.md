@@ -30,17 +30,22 @@ Ingresar con Usuario: ezequiel22g  Password: 2178
 ---
 
 ## 📦 Instalación y ejecución
+   Requisitos previos
+   
+   Tener instalado Java 17 o superior
+   
+   Tener instalado Maven
+
+⚠️ Importante:
+JavaFX no viene incluido en el JDK desde la versión 11.
+Este proyecto ya incluye la dependencia de JavaFX en el pom.xml, así que no hace falta instalarlo aparte si usás Maven.
 
 1. Cloná el repositorio:
    ```bash
    git clone https://github.com/ezequiel18-beep/billeteraVirtual.git
    cd billeteraVirtual
-2. Asegurate de tener instalado:
-    Java 17 o superior
-    
-    Maven (para compilar y ejecutar)
   
-3. Compilá y ejecutá el proyecto:
+2. Compilá y ejecutá el proyecto:
   
     mvn clean install
     mvn javafx:run
